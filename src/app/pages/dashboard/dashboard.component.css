@@ -1,0 +1,40 @@
+.nav-menu {
+    width: 220px; /* Ancho del navbar */
+    height: 100vh; /* Alto completo de la pantalla */
+    position: fixed; /* Fijo en la pantalla */
+  }
+  
+  .content {
+    margin-left: 220px; /* Deja espacio para el navbar */
+    width: calc(100% - 220px); /* Resto del ancho */
+    position: relative;
+  }
+  
+  .container-full {
+    min-height: 100vh; /* Ocupa todo el alto de la pantalla */
+    display: flex;
+    align-items: center; /* Alinea el contenido verticalmente */
+  }
+  
+  .image-background {
+    background-image: url('/assets/img/bienvenida.jpg'); /* Ruta a tu imagen */
+    background-repeat: no-repeat;
+    background-position: right center; /* Centra verticalmente y pega a la derecha */
+    background-size: cover; /* Cubre todo el contenedor */
+    width: 100%; /* Ocupará todo el ancho del contenedor */
+    height: 100%; /* Ocupará todo el alto del contenedor */
+    position: absolute; /* Permite que el texto se superponga */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+  }
+  
+  .text-content {
+    position: absolute; /* Permite posicionarlo de forma libre */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde el lado derecho */
+    z-index: 1; /* Asegura que el texto esté por delante */
+    padding: 10px; /* Espaciado interno */
+    color: #fff; /* Color del texto */
+}
+  

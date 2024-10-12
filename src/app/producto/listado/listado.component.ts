@@ -40,11 +40,15 @@ export class ListadoComponent {
       this.productos = data;
     });
   }
-  //eliminarProducto(id: number) {
-  //  this.productoService.eliminar(id).subscribe(data =>{
-  //    this.listarProducto();
-  //  });
-  //}
+  eliminarProducto(id: number) {
+    if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+      this.productoService.eliminar(id).subscribe(() => {
+        this.listarProducto(); // Actualiza la lista de productos
+      }, error => {
+        console.error('Error al eliminar el producto:', error);
+      });
+    }
+  }
 
   detalleProducto(id: number) {
     this.router.navigate(['producto/detalle',id])

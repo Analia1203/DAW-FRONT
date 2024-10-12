@@ -24,12 +24,14 @@ export class RegistrarComponent {
     fechaCompra: new Date(),
   }
 
+  private codigoContador: number = 1; // Contador inicial
   constructor(
     private productoService: ProductoService, 
     private proveedorService: ProveedorService, 
     private router: Router,
     private route: ActivatedRoute,
-  ) {}
+    
+  ) { this.autoAsignarCodigo();}
 
   ngOnInit(){
     //this.obtenerProducto();
@@ -76,4 +78,18 @@ export class RegistrarComponent {
         this.router.navigate(['producto/listar'])
       }
 
+      autoAsignarCodigo() {
+        this.newProducto.codPro = this.generarCodigo();
+      }
+    
+      generarCodigo(): string {
+        // Formatear el número con ceros a la izquierda
+        const codigoFormateado = String(this.codigoContador).padStart(4, '0');
+        const codigoFinal = 'PROD-' + codigoFormateado;
+    
+        // Incrementar el contador para el siguiente producto
+        this.codigoContador++;
+    
+        return codigoFinal;
+      }
 }

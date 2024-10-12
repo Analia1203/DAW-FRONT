@@ -11,16 +11,14 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductoService {
   proveedores: Proveedor[] = [];
-  private baseUrl = 'http://localhost:8080/api/producto';
+  private baseUrl = 'http://localhost:8080/auth/producto';
 
   constructor(private http: HttpClient, private proveedorService: ProveedorService) { }
 
   public listar(): Observable<Producto[]>{
     return this.http.get<Producto[]>(environment.urlHost+"auth/producto/listado");
   }
-  //public eliminar(id: number):Observable<any>{
-  //return this.http.delete(this.baseUrl + `/${id}`);
-  //}
+
   public obtenerProducto(id: number): Observable<Producto>{
     return  this.http.get<Producto>(environment.urlHost+"auth/producto"+ `/${id}`);
   }
@@ -32,5 +30,8 @@ export class ProductoService {
   }
   public editar(id: number, producto: Producto):Observable<any>{
     return this.http.put(environment.urlHost+"auth/producto" + `/${id}`,producto)
+  }
+  public eliminar(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 }
