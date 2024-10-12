@@ -25,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListadoComponent } from './producto/listado/listado.component';
 import { RegistrarComponent } from './producto/registrar/registrar.component';
 import { EditarComponent } from './producto/editar/editar.component';
+import { InfoSistemaComponent } from './info-sistema/info-sistema.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { EditarComponent } from './producto/editar/editar.component';
     ListadoComponent,
     RegistrarComponent,
     EditarComponent,
+    InfoSistemaComponent,
   ],
   imports: [
     BrowserModule,

@@ -49,6 +49,11 @@ export class ListadoComponent {
       });
     }
   }
+  /*eliminarProducto(id: number){
+    this.productoService.eliminar(id).subscribe(data =>{
+      this.listarProducto();
+  });
+  }*/
 
   detalleProducto(id: number) {
     this.router.navigate(['producto/detalle',id])

@@ -11,11 +11,13 @@ import { SolicitudListaComponent } from './solicitud/lista/lista.component';
 import { ListadoComponent } from './producto/listado/listado.component';
 import { RegistrarComponent } from './producto/registrar/registrar.component';
 import { EditarComponent } from './producto/editar/editar.component';
+import { InfoSistemaComponent } from './info-sistema/info-sistema.component';
 
 
 const routes: Routes = [
   {path:'',redirectTo:'/iniciar-sesion', pathMatch:'full'},
   {path:'inicio',component:DashboardComponent},
+  {path:'info-sistema',component:InfoSistemaComponent},
   {path:'iniciar-sesion',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'proveedor/lista',component:ProveedorComponent},
