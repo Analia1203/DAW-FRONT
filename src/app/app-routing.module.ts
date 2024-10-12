@@ -26,7 +26,8 @@ const routes: Routes = [
   {path:'proveedor/detalle/:id',component:ProveedorDetalleComponent},
   {path:'producto/listar', component:ListadoComponent},
   {path:'producto/registrar', component:RegistrarComponent},
-  {path:'producto/editar/:id', component:EditarComponent}
+  {path:'producto/editar/:id', component:EditarComponent},
+  {path:'producto/eliminar/:id', component:ListadoComponent}
 ];
 
 @NgModule({

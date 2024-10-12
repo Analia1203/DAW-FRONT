@@ -1,6 +1,12 @@
-<div class="container">
-<app-personal-details></app-personal-details>
-</div>
-<app-nav></app-nav> 
-<p *ngIf="!userLoginOn" class="alert alert-danger">Usuario NO autenticado</p>
-<p *ngIf="userLoginOn" class="alert alert-success">Usuario Autenticado</p>
+<div class="d-flex">
+    <app-nav class="nav-menu"></app-nav>
+    <div class="content container">
+      <div class="container-full" style="position: relative;">
+        <div class="image-background"></div>
+        <div class="text-content">
+          <p *ngIf="!userLoginOn" class="alert alert-danger">Usuario NO autenticado</p>
+          <p *ngIf="userLoginOn" class="alert alert-success">Usuario Autenticado</p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,6 +1,10 @@
-<app-nav></app-nav>
-<div class="container">
-    <h1 class="text-center mb-4">LISTA DE SOLICITUDES</h1>
+<div class="d-flex" style="height: 100vh;"> <!-- Alto completo de la ventana -->
+  <app-nav class="flex-shrink-0" style="width: 250px; height: 100vh; overflow-y: auto;"></app-nav>
+  <!-- Menú de navegación -->
+
+  <div class="container mt-4 flex-grow-1" style="height: calc(100vh - 1rem); overflow-y: auto;">
+      <!-- Alto fijo y desplazamiento -->
+      <h1 class="text-center mb-4"> LISTADO SOLICITUDES </h1>
     <button type="button" class="btn btn-primary" (click)="irRegistroSolicitud()">Requerimiento</button>
     <br>
     <br>
@@ -28,6 +32,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 </div>
 
 
